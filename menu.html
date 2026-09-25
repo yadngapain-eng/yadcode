@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Materi — YADCODE</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="bgCanvas"></canvas>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-brand">
+    <span class="logo-svg">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+        <rect x="2" y="2" width="30" height="30" rx="8" stroke="#00e5ff" stroke-width="2"/>
+        <path d="M10 12 L6 17 L10 22" stroke="#00e5ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M24 12 L28 17 L24 22" stroke="#7c4dff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M19 9 L15 25" stroke="#ffd54f" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+    </span>
+    <span class="brand-name">YADCODE</span>
+  </a>
+  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">🏠 Home</a>
+    <a href="menu.html" class="active">📚 Materi</a>
+    <a href="playground.html">🧪 Playground</a>
+    <a href="leaderboard.html">🏆 Leaderboard</a>
+    <a href="credit.html">💎 Credit</a>
+  </div>
+</nav>
+
+<div class="live-bar">
+  <span class="live-dot"></span>
+  <span>Live:</span>
+  <span id="liveCount">0</span>
+  <span>coders online</span>
+</div>
+
+<header class="menu-header">
+  <canvas id="menuCanvas" class="menu-canvas"></canvas>
+  <div class="menu-header-content">
+    <h1>📚 <span class="gradient-text">Materi Belajar</span></h1>
+    <p>Pilih materi yang mau kamu pelajari hari ini</p>
+  </div>
+</header>
+
+<div class="filter-bar">
+  <input type="text" id="searchInput" placeholder="🔍 Cari materi...">
+  <select id="categoryFilter">
+    <option value="all">Semua Kategori</option>
+    <option value="html">HTML</option>
+    <option value="css">CSS</option>
+    <option value="js">JavaScript</option>
+    <option value="python">Python</option>
+  </select>
+  <select id="levelFilter">
+    <option value="all">Semua Level</option>
+    <option value="pemula">Pemula</option>
+    <option value="menengah">Menengah</option>
+    <option value="lanjutan">Lanjutan</option>
+  </select>
+</div>
+
+<section class="learn-section">
+  <div class="lesson-grid" id="lessonGrid"></div>
+</section>
+
+<div class="modal" id="quizModal">
+  <div class="modal-content quiz-modal">
+    <button class="modal-close" onclick="closeQuiz()">✕</button>
+    <div id="quizBody"></div>
+  </div>
+</div>
+
+<div class="modal" id="readerModal">
+  <div class="modal-content reader-modal">
+    <button class="modal-close" onclick="closeReader()">✕</button>
+    <div class="reader-content" id="readerBody"></div>
+  </div>
+</div>
+
+<footer>
+  <p>Made with 💙 by <a href="credit.html">YADCODE Team</a></p>
+  <p style="margin-top:8px">© 2025 YADCODE. All rights reserved.</p>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/bg.js"></script>
+<script src="js/stickman.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
