@@ -1,48 +1,79 @@
 <!DOCTYPE html>
-<html lang="id"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Credit — YadCode</title><link rel="stylesheet" href="css/style.css">
-</head><body>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Credit — YADCODE</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 <canvas id="bgCanvas"></canvas>
+
 <nav class="navbar">
-  <a href="index.html" class="nav-brand"><span class="logo-svg"><svg viewBox="0 0 40 40" width="40" height="40"><defs><linearGradient id="lg" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#00e5ff"/><stop offset="100%" stop-color="#7c4dff"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><text x="20" y="28" font-family="monospace" font-size="20" font-weight="900" fill="#fff" text-anchor="middle">&lt;/&gt;</text></svg></span><span class="brand-name">YadCode</span></a>
-  <div class="nav-links">
-    <a href="index.html">Home</a><a href="learn.html">Learn</a>
-    <a href="quiz.html">Quiz</a><a href="games.html">Games</a>
-    <a href="playground.html">Playground</a><a href="leaderboard.html">Rank</a>
-    <a href="credit.html" class="active">Credit</a>
+  <a href="index.html" class="nav-brand">
+    <span class="logo-svg">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+        <rect x="2" y="2" width="30" height="30" rx="8" stroke="#00e5ff" stroke-width="2"/>
+        <path d="M10 12 L6 17 L10 22" stroke="#00e5ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M24 12 L28 17 L24 22" stroke="#7c4dff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M19 9 L15 25" stroke="#ffd54f" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+    </span>
+    <span class="brand-name">YADCODE</span>
+  </a>
+  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">🏠 Home</a>
+    <a href="menu.html">📚 Materi</a>
+    <a href="playground.html">🧪 Playground</a>
+    <a href="leaderboard.html">🏆 Leaderboard</a>
+    <a href="credit.html" class="active">💎 Credit</a>
   </div>
-  <button class="nav-toggle" onclick="toggleNav()">☰</button>
 </nav>
 
-<section class="menu-header">
-  <canvas id="menuCanvas" class="menu-canvas"></canvas>
-  <div class="menu-header-content">
-    <h1>💝 Credit</h1>
-    <p>Terima kasih sudah belajar di YadCode.</p>
+<section class="credit-section">
+  <div class="credit-card">
+    <div class="credit-avatar">Y</div>
+    <div class="credit-name">YADCODE</div>
+    <div class="credit-role">Coding Platform untuk Semua</div>
+
+    <div class="credit-quote">
+      "Belajar coding bukan soal bakat — tapi soal konsistensi dan rasa penasaran."
+    </div>
+
+    <div class="credit-msg">
+      <p>YADCODE dibuat dengan tujuan sederhana: <b>membuat belajar coding jadi menyenangkan</b> untuk semua orang — tanpa biaya, tanpa ribet, langsung dari browser.</p>
+      <p>Kami percaya setiap orang bisa jadi coder hebat jika diberi tools yang tepat dan materi yang mudah dipahami.</p>
+      <p>Terima kasih sudah menjadi bagian dari perjalanan ini. 💙</p>
+    </div>
+
+    <div class="credit-stats">
+      <div class="stat">
+        <span class="stat-num">50+</span>
+        <span class="stat-label">Materi</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">1200+</span>
+        <span class="stat-label">Coders</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">350+</span>
+        <span class="stat-label">Quiz</span>
+      </div>
+    </div>
+
+    <a href="menu.html" class="btn btn-primary glow-pulse">🚀 Mulai Belajar</a>
   </div>
 </section>
 
-<section class="credit-section"><div class="credit-card">
-  <div class="credit-avatar">Y</div>
-  <h1 class="credit-name">Ysdev</h1>
-  <p class="credit-role">Founder & Developer YadCode</p>
-  <div class="credit-quote"><p>"Kode bukan cuma baris teks — dia bahasa untuk membangun mimpi."</p></div>
-  <div class="credit-msg">
-    <p>YadCode lahir dari mimpi sederhana: <strong>belajar coding harusnya seru, bukan menakutkan</strong>.</p>
-    <p>Di sini kamu bisa belajar tanpa batas, main game edukasi, dan bangun proyek sendiri.</p>
-    <p>Setiap baris kode ditulis dengan <strong>cinta, kopi, dan sedikit drama</strong>.</p>
-    <p>Terima kasih sudah jadi bagian dari perjalanan ini. 🚀</p>
-  </div>
-  <div class="credit-stats">
-    <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Ide</span></div>
-    <div class="stat"><span class="stat-num">24/7</span><span class="stat-label">Semangat</span></div>
-    <div class="stat"><span class="stat-num">1</span><span class="stat-label">Mimpi</span></div>
-  </div>
-  <a href="index.html" class="btn btn-primary">Kembali ke Home</a>
-</div></section>
+<footer>
+  <p>Made with 💙 by <a href="credit.html">YADCODE Team</a></p>
+  <p style="margin-top:8px">© 2025 YADCODE. All rights reserved.</p>
+</footer>
 
-<footer><p>© 2026 YadCode. Dibuat dengan ❤️ oleh Ysdev</p></footer>
-<script src="js/main.js"></script>
+<div class="toast" id="toast"></div>
+
 <script src="js/bg.js"></script>
-</body></html>
+<script src="js/app.js"></script>
+</body>
+</html>
