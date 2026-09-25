@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>YadCode — Belajar Coding Seru</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="bgCanvas"></canvas>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-brand">
+    <span class="logo-svg">
+      <svg viewBox="0 0 40 40" width="40" height="40">
+        <defs><linearGradient id="lg" x1="0" x2="1" y1="0" y2="1">
+          <stop offset="0%" stop-color="#00e5ff"/><stop offset="100%" stop-color="#7c4dff"/>
+        </linearGradient></defs>
+        <rect width="40" height="40" rx="11" fill="url(#lg)"/>
+        <text x="20" y="28" font-family="monospace" font-size="20" font-weight="900" fill="#fff" text-anchor="middle">&lt;/&gt;</text>
+      </svg>
+    </span>
+    <span class="brand-name">YadCode</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="learn.html">Learn</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="games.html">Games</a>
+    <a href="playground.html">Playground</a>
+    <a href="leaderboard.html">Rank</a>
+    <a href="credit.html">Credit</a>
+  </div>
+  <button class="nav-toggle" onclick="toggleNav()">☰</button>
+</nav>
+
+<div class="live-bar">
+  <span class="live-dot"></span>
+  <span id="liveCount">1,247</span> pelajar coding online
+  <span class="divider">|</span>
+  <span id="liveFeed">Yadi baru menyelesaikan Quiz Java</span>
+</div>
+
+<section class="hero">
+  <canvas id="heroCanvas" class="hero-canvas"></canvas>
+  <div class="hero-content">
+    <h1 class="hero-title">Belajar <span class="gradient-text">Coding</span> Jadi Seru</h1>
+    <p class="hero-sub">Dari nol sampai bisa — dengan quiz interaktif, mini games, dan animasi keren.</p>
+    <div class="hero-buttons">
+      <a href="learn.html" class="btn btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+        Mulai Belajar
+      </a>
+      <a href="games.html" class="btn btn-secondary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M8 10v4"/><circle cx="16" cy="11" r="1"/><circle cx="18" cy="14" r="1"/></svg>
+        Main Games
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="stats-strip">
+  <div class="stat-item"><span class="stat-num" data-count="1247">0</span><span>Pelajar Aktif</span></div>
+  <div class="stat-item"><span class="stat-num" data-count="42">0</span><span>Pelajaran</span></div>
+  <div class="stat-item"><span class="stat-num" data-count="280">0</span><span>Soal Quiz</span></div>
+  <div class="stat-item"><span class="stat-num" data-count="8">0</span><span>Mini Games</span></div>
+</section>
+
+<section class="features">
+  <h2 class="section-title">4 Cara Belajar Seru</h2>
+  <div class="feature-grid">
+    <a href="learn.html" class="feature-card">
+      <div class="feature-icon-svg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+      </div>
+      <h3>📚 Learn Code</h3>
+      <p>42 pelajaran dari HTML sampai Full-Stack. Materi lengkap dengan contoh kode.</p>
+    </a>
+    <a href="quiz.html" class="feature-card">
+      <div class="feature-icon-svg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      </div>
+      <h3>🎯 Quiz Interaktif</h3>
+      <p>280 soal dengan animasi stickman yang bereaksi ke jawabanmu.</p>
+    </a>
+    <a href="games.html" class="feature-card">
+      <div class="feature-icon-svg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M8 10v4"/><circle cx="16" cy="11" r="1"/><circle cx="18" cy="14" r="1"/></svg>
+      </div>
+      <h3>🎮 Mini Games</h3>
+      <p>8 game seru: tebak kode, susun logic, fix bug, dan masih banyak lagi.</p>
+    </a>
+    <a href="playground.html" class="feature-card">
+      <div class="feature-icon-svg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      </div>
+      <h3>🧪 Playground</h3>
+      <p>Tulis dan jalankan kode HTML, CSS, JavaScript langsung di browser.</p>
+    </a>
+  </div>
+</section>
+
+<section class="recommend">
+  <h2 class="section-title">🔥 Rekomendasi Untukmu</h2>
+  <div id="recommendBox" class="recommend-grid"></div>
+</section>
+
+<section class="activity-section">
+  <h2 class="section-title">🔴 Aktivitas Terkini</h2>
+  <div id="activityFeed" class="activity-feed"></div>
+</section>
+
+<section class="cta">
+  <h2>Siap Jadi Programmer?</h2>
+  <p>Mulai dari nol, gratis, tanpa install apapun.</p>
+  <a href="learn.html" class="btn btn-primary">Mulai Sekarang</a>
+</section>
+
+<footer><p>© 2026 YadCode. Dibuat dengan ❤️ oleh <a href="credit.html">Ysdev</a></p></footer>
+<script src="js/main.js"></script>
+<script src="js/stickman.js"></script>
+<script src="js/bg.js"></script>
+</body>
+</html>
