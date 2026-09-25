@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Leaderboard — YadCode</title><link rel="stylesheet" href="css/style.css">
+</head><body>
+<canvas id="bgCanvas"></canvas>
+<nav class="navbar">
+  <a href="index.html" class="nav-brand"><span class="logo-svg"><svg viewBox="0 0 40 40" width="40" height="40"><defs><linearGradient id="lg" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#00e5ff"/><stop offset="100%" stop-color="#7c4dff"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><text x="20" y="28" font-family="monospace" font-size="20" font-weight="900" fill="#fff" text-anchor="middle">&lt;/&gt;</text></svg></span><span class="brand-name">YadCode</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a><a href="learn.html">Learn</a>
+    <a href="quiz.html">Quiz</a><a href="games.html">Games</a>
+    <a href="playground.html">Playground</a><a href="leaderboard.html" class="active">Rank</a>
+    <a href="credit.html">Credit</a>
+  </div>
+  <button class="nav-toggle" onclick="toggleNav()">☰</button>
+</nav>
+
+<section class="menu-header">
+  <canvas id="menuCanvas" class="menu-canvas"></canvas>
+  <div class="menu-header-content">
+    <h1>🏆 Leaderboard</h1>
+    <p>Top 20 pelajar coding paling rajin minggu ini.</p>
+  </div>
+</section>
+
+<section class="leaderboard-section">
+  <div class="lb-tabs">
+    <button class="lb-tab active" onclick="showLbTab('weekly', this)">Mingguan</button>
+    <button class="lb-tab" onclick="showLbTab('alltime', this)">Sepanjang Masa</button>
+  </div>
+  <div id="lbContent" class="lb-content"></div>
+</section>
+
+<footer><p>© 2026 YadCode. Dibuat dengan ❤️ oleh <a href="credit.html">Ysdev</a></p></footer>
+<script src="js/leaderboard.js"></script>
+<script src="js/main.js"></script>
+<script src="js/bg.js"></script>
+</body></html>
